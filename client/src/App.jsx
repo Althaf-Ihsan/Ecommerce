@@ -8,6 +8,7 @@ import { loadUser } from './redux/actions/user';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { server } from './server';
+import HomePage from './Pages/HomePage';
 function App() {
   // useEffect(()=>{
   //   const {data}= axios.get(`${server}/getuser`,{withCredentials:true})
@@ -17,6 +18,7 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
+      <Route path="/" element={<HomePage/>}/>
       <Route  path="/login" element={<LoginPage/>}/>
       <Route path="/signup" element={<SignupPage/>}/>
       <Route path="/activation/:activation_token" element={<ActivationPage/>}/>
